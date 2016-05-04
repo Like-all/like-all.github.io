@@ -4,9 +4,33 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <title>Status page</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/stylesheets/style.css">
+    <title>it-the-drote.tk status page</title>
   </head>
   <body>
-    Foo bar.
+    <div class="col-md-8">
+      <div class="col-md-8">
+        <h1 id="main-status">it-the-drote.tk server status is </h1>
+      </div>
+      <div class="col-md-8">
+        <h3>Upcoming events</h3>
+        <div id="events">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3>Services status</h3>
+        </div>
+        <div class="panel-body">
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-success">Main website</li>
+            <li class="list-group-item list-group-item-danger">XMPP server</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
