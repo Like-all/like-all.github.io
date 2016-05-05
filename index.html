@@ -18,19 +18,23 @@
         <div id="events">
         </div>
       </div>
+      <div class="col-md-8">
+        <h3>Event log</h3>
+        <div id="log">
+        </div>
+      </div>
     </div>
     <div class="col-md-4">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3>Services status</h3>
+          <h3>Services health status</h3>
         </div>
         <div class="panel-body">
-          <ul class="list-group">
-            <li class="list-group-item list-group-item-success">Main website</li>
-            <li class="list-group-item list-group-item-danger">XMPP server</li>
+          <ul class="list-group" id="services-health-status">
           </ul>
         </div>
       </div>
     </div>
+    <script src="assets/javascripts/updater.js" charset="utf-8"></script>
   </body>
 </html>
