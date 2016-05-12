@@ -52,7 +52,7 @@ fetch('events/example.json')
           if (data[i].timeStart > Math.floor(Date.now() / 1000)) {
             document.getElementById('events').innerHTML = '<h5>' + data[i].description + '</h5>' + document.getElementById('events').innerHTML;
           } else {
-            document.getElementById('log').innerHTML = '<h5>' + data[i].description + '</h5>' + document.getElementById('events').innerHTML;
+            document.getElementById('log').innerHTML = '<h5>' + data[i].description + '</h5>' + document.getElementById('log').innerHTML;
           }
         }
       });
