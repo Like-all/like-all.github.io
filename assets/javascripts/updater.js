@@ -1,4 +1,4 @@
-fetch('http://api.dev.it-the-drote.tk/status/example.json')
+fetch('http://api.dev.it-the-drote.tk/status/status.json')
   .then(
     function(response) {
       if (response.status !== 200) {
