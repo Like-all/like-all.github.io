@@ -7,8 +7,8 @@
   },
   {
     "type": "outage",
-    "timeStart": 1459843200,
-    "timeEnd": 1459846800,
+    "timeStart": 1459843999,
+    "timeEnd": 1459846999,
     "description": "shutting down the data-center"
   },
   {
@@ -16,5 +16,17 @@
     "timeStart": 1559843200,
     "timeEnd": 1559846800,
     "description": "test"
+  },
+  {
+    "type": "maintenance",
+    "timeStart": 1469843999,
+    "timeEnd": 1469846999,
+    "description": "test2"
+  },
+  {
+    "type": "maintenance",
+    "timeStart": 1449843200,
+    "timeEnd": 1449846800,
+    "description": "test3"
   }
 ]
