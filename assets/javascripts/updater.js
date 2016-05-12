@@ -38,3 +38,25 @@ fetch('http://api.dev.it-the-drote.tk/status/example.json')
     document.getElementById('main-status').innerHTML = document.getElementById('main-status').innerHTML + "down";
     document.body.style.background = "red";
   });
+
+fetch('events/example.json')
+  .then(
+    function(response) {
+      if (response.status !== 200) {
+        console.log('Unable to fetch event log');
+        return;
+      }
+
+      response.json().then(function(data) {
+        for (var i = 0; i < data.length; i++) {
+          if (data[i].timeStart > Math.floor(Date.now() / 1000)) {
+            document.getElementById('events').innerHTML = '<h5>' + data[i].description + '</h5>' + document.getElementById('events').innerHTML;
+          } else {
+            document.getElementById('log').innerHTML = '<h5>' + data[i].description + '</h5>' + document.getElementById('events').innerHTML;
+          }
+        }
+      });
+    }
+  ).catch(function(err) {
+      console.log('Something went wrong: ' + err);
+  });
