@@ -10,5 +10,11 @@
     "timeStart": 1459843200,
     "timeEnd": 1459846800,
     "description": "shutting down the data-center"
+  },
+  {
+    "type": "maintenance",
+    "timeStart": 1559843200,
+    "timeEnd": 1559846800,
+    "description": "test"
   }
 ]
