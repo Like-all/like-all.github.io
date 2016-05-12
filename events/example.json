@@ -1,0 +1,14 @@
+[
+  {
+    "type": "maintenance",
+    "timeStart": 1459843200,
+    "timeEnd": 1459846800,
+    "description": "replacing old certificates"
+  },
+  {
+    "type": "outage",
+    "timeStart": 1459843200,
+    "timeEnd": 1459846800,
+    "description": "shutting down the data-center"
+  }
+]
