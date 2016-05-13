@@ -78,7 +78,7 @@ fetch('events/example.json')
         for (var i = 0; i < data.length; i++) {
           var currentDate = timeConverter(data[i].timeStart);
           var eta = humanReadableTime(data[i].timeEnd - data[i].timeStart);
-          var item = '<div class="messagebox"><h6>' + data[i].type
+          var item = '<div class="messagebox"><h6 class="time-marker">' + data[i].type
                         + ' at '
                         + currentDate
                         + '; ETA '
