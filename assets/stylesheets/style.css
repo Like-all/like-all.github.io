@@ -3,6 +3,11 @@ body {
   padding: 10px;
 }
 
+.messagebox {
+  background-color: #2D9266;
+  padding: 10px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
   font-family: 'Roboto Slab', serif;

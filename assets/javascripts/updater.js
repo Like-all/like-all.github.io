@@ -1,3 +1,30 @@
+
+function timeConverter(UNIX_timestamp){
+  var a = new Date(UNIX_timestamp * 1000);
+  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var year = a.getFullYear();
+  var month = months[a.getMonth()];
+  var date = a.getDate();
+  var hour = a.getHours();
+  var min = a.getMinutes();
+  var sec = a.getSeconds();
+  var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+  return time;
+}
+
+
+function humanReadableTime(sec) {
+    var sec_num = parseInt(sec, 10); // don't forget the second param
+    var hours   = Math.floor(sec_num / 3600);
+    var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
+    var seconds = sec_num - (hours * 3600) - (minutes * 60);
+
+    if (hours   < 10) {hours   = "0"+hours;}
+    if (minutes < 10) {minutes = "0"+minutes;}
+    if (seconds < 10) {seconds = "0"+seconds;}
+    return hours+':'+minutes+':'+seconds;
+}
+
 fetch('http://api.dev.it-the-drote.tk/status/status.json')
   .then(
     function(response) {
@@ -49,10 +76,20 @@ fetch('events/example.json')
 
       response.json().then(function(data) {
         for (var i = 0; i < data.length; i++) {
+          var currentDate = timeConverter(data[i].timeStart);
+          var eta = humanReadableTime(data[i].timeEnd - data[i].timeStart);
+          var item = '<div class="messagebox"><h6>' + data[i].type
+                        + ' at '
+                        + currentDate
+                        + '; ETA '
+                        + eta
+                        + '</h6><h5>'
+                        + data[i].description
+                        + '</h5></div>';
           if (data[i].timeStart > Math.floor(Date.now() / 1000)) {
-            document.getElementById('events').innerHTML = '<h5>' + data[i].description + '</h5>' + document.getElementById('events').innerHTML;
+            document.getElementById('events').innerHTML = item + document.getElementById('events').innerHTML;
           } else {
-            document.getElementById('log').innerHTML = '<h5>' + data[i].description + '</h5>' + document.getElementById('log').innerHTML;
+            document.getElementById('log').innerHTML = item + document.getElementById('log').innerHTML;
           }
         }
       });

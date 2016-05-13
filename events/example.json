@@ -21,7 +21,7 @@
     "type": "maintenance",
     "timeStart": 1469843999,
     "timeEnd": 1469846999,
-    "description": "test2"
+    "description": "This is an example of event"
   },
   {
     "type": "maintenance",
